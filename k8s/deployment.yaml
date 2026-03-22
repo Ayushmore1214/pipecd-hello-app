@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipecd-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pipecd-app
+  template:
+    metadata:
+      labels:
+        app: pipecd-app
+    spec:
+      containers:
+        - name: app
+          image: ayush12141/pipecd-app:v1
+          ports:
+            - containerPort: 3000
+          env:
+            - name: VERSION
+              value: "v1"
