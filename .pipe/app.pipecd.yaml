@@ -2,15 +2,16 @@ apiVersion: pipecd.dev/v1beta1
 kind: Application
 spec:
   name: pipecd-app
-  labels:
-    env: dev
   pipeline:
     stages:
       - name: K8S_SYNC
+
   source:
-    repoURL: https://github.com/Ayushmore1214/pipecd-hello-app
+    repoURL: https://github.com/Ayushmore1214/pipecd-demo
+    repoId: my-repo   
     path: k8s
     targetRevision: main
+
   destination:
     cluster: default
     namespace: default
