@@ -14,7 +14,7 @@ data:
           remote: https://github.com/pipe-cd/examples.git
           branch: master
         - repoId: my-repo
-          remote: https://github.com/Ayushmore1214/pipecd-demo.git
+          remote: https://github.com/Ayushmore1214/pipecd-hello-app.git
           branch: main
       plugins:
         - name: kubernetes # kubernetes plugin version: v0.3.0
