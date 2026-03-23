@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: app
-          image: ayush12141/pipecd-app:v1
+          image: ayush12141/pipecd-app:v2
           ports:
             - containerPort: 3000
           env:
             - name: VERSION
-              value: "v1"
+              value: "v2"
