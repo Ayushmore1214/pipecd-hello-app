@@ -7,7 +7,7 @@ spec:
       - name: K8S_SYNC
 
   source:
-    repoURL: https://github.com/Ayushmore1214/pipecd-demo
+    repoURL: https://github.com/Ayushmore1214/pipecd-hello-app
     repoId: my-repo   
     path: k8s
     targetRevision: main
