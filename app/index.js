@@ -1,13 +1,16 @@
-const http = require("http");
+const express = require("express");
+const app = express();
 
 const PORT = 3000;
-const VERSION = process.env.VERSION || "v2";
+const VERSION = process.env.VERSION || "v1";
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end(`Hello from PipeCD 🚀\nVersion: ${VERSION}\n`);
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>🚀 PipeCD Demo</h1>
+    <h2>Version: ${VERSION}</h2>
+  `);
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Running on ${PORT}`);
 });
