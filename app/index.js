@@ -6,7 +6,7 @@ const VERSION = process.env.VERSION || "v1";
 
 app.get("/", (req, res) => {
   res.send(`
-    <h1>🚀 PipeCD Demo</h1>
+    <h1> PipeCD Demo</h1>
     <h2>Version: ${VERSION}</h2>
   `);
 });
