@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: pipecd-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: pipecd-app
@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: app
-          image: ayush12141/pipecd-app:v2
+          image: ayush12141/pipecd-app:v1
           ports:
             - containerPort: 3000
           env:
             - name: VERSION
-              value: "v2"
+              value: "v1"

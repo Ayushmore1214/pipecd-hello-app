@@ -3,10 +3,8 @@ kind: Service
 metadata:
   name: pipecd-app
 spec:
-  type: NodePort
   selector:
     app: pipecd-app
   ports:
     - port: 80
       targetPort: 3000
-      nodePort: 30007
